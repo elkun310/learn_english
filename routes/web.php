@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('hello', function () {
-    echo "hello elkun";
+Route::get('hello/{name}', function ($name) {
+    echo "hello ".$name;
 });
