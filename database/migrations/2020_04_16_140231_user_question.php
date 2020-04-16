@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Answer extends Migration
+class UserQuestion extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,14 @@ class Answer extends Migration
      */
     public function up()
     {
-        Schema::create('answer', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->text('content');
+        Schema::create('user_question', function (Blueprint $table) {
+            $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('question_id')->unsigned();
+            $table->integer('sum_answer_right');
+            $table->integer('sum_answer_false');
+            $table->integer('sum_people_right');
+            $table->integer('sum_people_false');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('question_id')->references('id')->on('question')->onDelete('cascade');
             $table->timestamps();
         });
@@ -29,6 +33,6 @@ class Answer extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('answer');
+        Schema::dropIfExists('user_question');
     }
 }

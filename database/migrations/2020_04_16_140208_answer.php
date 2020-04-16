@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Level extends Migration
+class Answer extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class Level extends Migration
      */
     public function up()
     {
-        Schema::create('level', function (Blueprint $table) {
+        Schema::create('answer', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('namelevel',50);
-            
+            $table->text('content');
+            $table->bigInteger('question_id')->unsigned();
+            $table->foreign('question_id')->references('id')->on('question')->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
@@ -27,6 +29,6 @@ class Level extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('level');
+        Schema::dropIfExists('answer');
     }
 }
