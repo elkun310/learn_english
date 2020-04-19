@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+// Route::get('add_user', function () {
+//     $user = new User;
+//     $user->firstname = "elkun";
+//     $user->lastname = "nguyen";
+//     $user->email = "elkun310@gmail.com";
+//     $user->password = bcrypt('123456');
+//     $user->phone = "0389938822";
+//     $user->role = "1";
+//     $user->save();
+// });
