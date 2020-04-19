@@ -24,15 +24,3 @@ Route::get('alter_user_table', function () {
     });
     echo "ok";
 });
-
-// Route::get('add_user', function () {
-//     $user = new User;
-//     $user->firstname = "elkun";
-//     $user->lastname = "nguyen";
-//     $user->email = "elkun310@gmail.com";
-//     $user->password = bcrypt('123456');
-//     $user->phone = "0389938822";
-//     $user->level = "1";
-//     $user->role = "1";
-//     $user->save();
-// });
