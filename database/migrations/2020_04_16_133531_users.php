@@ -19,8 +19,8 @@ class Users extends Migration
             $table->string('lastname',50);
             $table->string('email',100)->unique();
             $table->string('password');
-            $table->string('phone')->nullable();
-            $table->tinyInteger('level');
+            $table->string('phone',11)->nullable();
+            $table->integer('level')->nullable()->default('1');
             $table->tinyInteger('role');
             $table->string('remember_token',100)->nullable();
             $table->timestamps();
