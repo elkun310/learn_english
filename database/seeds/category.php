@@ -14,16 +14,16 @@ class category extends Seeder
         DB::table('category')->delete();
         DB::table('category')->insert([
             [
-                'id'=>'1','slug'=>'the-thao','name'=>'thể thao'
+                'id'=>'1','name'=>'thể thao','slug'=>'the-thao'
             ],
             [
-                'id'=>'2','slug'=>'khoa-hoc','name'=>'khoa học'
+                'id'=>'2','name'=>'khoa học','slug'=>'khoa-hoc'
             ],
             [
-                'id'=>'3','slug'=>'am-nhac','name'=>'âm nhạc'
+                'id'=>'3','name'=>'âm nhạc','slug'=>'am-nhac'
             ],
             [
-                'id'=>'4','slug'=>'cong-nghe','name'=>'công nghệ'
+                'id'=>'4','name'=>'công nghệ','slug'=>'cong-nghe'
             ],
         ]);
     }
