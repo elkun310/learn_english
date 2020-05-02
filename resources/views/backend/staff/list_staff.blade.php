@@ -13,22 +13,17 @@
 
     <section class="content">
             <div class="table-responsive">
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-striped" id="staff_table">
                     <thead>
                         <tr>
-                            <td>
-                                FullName
-                            </td>
-                            <td>
-                                Email
-                            </td>
-                            <td>
-                                Phone
-                            </td>
+                            <td>FullName</td>
+                            <td>Email</td>
+                            <td>Phone</td>
                             <td>Role</td>
+                            <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    {{-- <tbody>
                         @foreach ($users as $user)
                             <tr>
                                 <td>{{$user->firstname." ".$user->lastname}}</td>
@@ -37,11 +32,47 @@
                                 <td>{{$user->role}}</td>
                             </tr>
                         @endforeach
-                    </tbody>
+                    </tbody> --}}
                 </table>
             </div>
     </section>
 @endsection
 @section('script')
     @parent
+    <script>
+        $('#staff_table').DataTable({
+            processing: true,
+            serverSide: true,
+            ajax: {
+                url: "{{ route('staff.index') }}",
+            },
+            columns: [
+                {
+                    data: 'firstname',
+                    name: 'firstname'
+                },
+                {
+                    data: 'email',
+                    name: 'email'
+                },
+                {
+                    data: 'phone',
+                    name: 'phone'
+                },
+                {
+                    data: 'role',
+                    name: 'role'
+                },
+                {
+                    data: 'action',
+                    name: 'action',
+                    orderable: false
+                }
+            ]
+        });
+
+        // $(document).ready( function () {
+        //     $('#staff_table').DataTable();
+        // } );
+    </script>
 @endsection

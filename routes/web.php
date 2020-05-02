@@ -25,6 +25,7 @@ Route::get('alter_user_table', function () {
 Route::group(['prefix' => 'admin','namespace'=>'backend'], function () {
     Route::get('/','IndexController@index');
     Route::group(['prefix' => 'staff'], function () {
-        Route::get('/','StaffController@index');
+        Route::get('/','StaffController@index')->name('staff.index');
     });
+    // Route::resource('staff', 'StaffController');
 });
