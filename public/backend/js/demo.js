@@ -189,55 +189,55 @@ $(function () {
     // Layout options
     $demoSettings.append(
         '<h4 class="control-sidebar-heading">'
-        + 'Layout Options'
+        + 'Tuỳ chọn giao diện'
         + '</h4>'
         // Fixed layout
         + '<div class="form-group">'
         + '<label class="control-sidebar-subheading">'
         + '<input type="checkbox"data-layout="fixed"class="pull-right"/> '
-        + 'Fixed layout'
+        + 'Bố trí cố định'
         + '</label>'
-        + '<p>Activate the fixed layout. You can\'t use fixed and boxed layouts together</p>'
+        + '<p>Kích hoạt bố cục cố định. Bạn không thể sử dụng bố trí cố định và đóng hộp cùng nhau</p>'
         + '</div>'
         // Boxed layout
         + '<div class="form-group">'
         + '<label class="control-sidebar-subheading">'
         + '<input type="checkbox"data-layout="layout-boxed" class="pull-right"/> '
-        + 'Boxed Layout'
+        + 'Giao diện đóng hộp'
         + '</label>'
-        + '<p>Activate the boxed layout</p>'
+        + '<p>Kích hoạt bố cục hình hộp</p>'
         + '</div>'
         // Sidebar Toggle
         + '<div class="form-group">'
         + '<label class="control-sidebar-subheading">'
         + '<input type="checkbox"data-layout="sidebar-collapse"class="pull-right"/> '
-        + 'Toggle Sidebar'
+        + 'Chuyển đổi thanh bên'
         + '</label>'
-        + '<p>Toggle the left sidebar\'s state (open or collapse)</p>'
+        + '<p>Chuyển đổi trạng thái của thanh bên trái (mở hoặc thu gọn)</p>'
         + '</div>'
         // Sidebar mini expand on hover toggle
         + '<div class="form-group">'
         + '<label class="control-sidebar-subheading">'
         + '<input type="checkbox"data-enable="expandOnHover"class="pull-right"/> '
-        + 'Sidebar Expand on Hover'
+        + 'Thanh bên Mở rộng trên Hover'
         + '</label>'
-        + '<p>Let the sidebar mini expand on hover</p>'
+        + '<p>Hãy để sidebar mini mở rộng khi di chuột</p>'
         + '</div>'
         // Control Sidebar Toggle
         + '<div class="form-group">'
         + '<label class="control-sidebar-subheading">'
         + '<input type="checkbox"data-controlsidebar="control-sidebar-open"class="pull-right"/> '
-        + 'Toggle Right Sidebar Slide'
+        + 'Chuyển đổi Slide bên phải'
         + '</label>'
-        + '<p>Toggle between slide over content and push content effects</p>'
+        + '<p>Chuyển đổi giữa slide trên nội dung và hiệu ứng nội dung đẩy</p>'
         + '</div>'
         // Control Sidebar Skin Toggle
         + '<div class="form-group">'
         + '<label class="control-sidebar-subheading">'
         + '<input type="checkbox"data-sidebarskin="toggle"class="pull-right"/> '
-        + 'Toggle Right Sidebar Skin'
+        + 'Chuyển đổi màu sắc bên phải'
         + '</label>'
-        + '<p>Toggle between dark and light skins for the right sidebar</p>'
+        + '<p>Chuyển đổi giữa màu tối và sáng cho thanh bên phải</p>'
         + '</div>'
     )
     var $skinsList = $('<ul />', {'class': 'list-unstyled clearfix'})
@@ -342,7 +342,7 @@ $(function () {
                 + '<p class="text-center no-margin" style="font-size: 12px">Yellow Light</p>')
     $skinsList.append($skinYellowLight)
 
-    $demoSettings.append('<h4 class="control-sidebar-heading">Skins</h4>')
+    $demoSettings.append('<h4 class="control-sidebar-heading">Màu sắc</h4>')
     $demoSettings.append($skinsList)
 
     $tabPane.append($demoSettings)

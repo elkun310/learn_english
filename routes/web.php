@@ -12,10 +12,6 @@ use App\User;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
 // alter table users
 Route::get('alter_user_table', function () {
     Schema::table('users', function ($table) {
@@ -24,6 +20,11 @@ Route::get('alter_user_table', function () {
     });
     echo "ok";
 });
-Route::get('index', function () {
-   return view('backend.index'); 
+
+//ADMIN
+Route::group(['prefix' => 'admin','namespace'=>'backend'], function () {
+    Route::get('/','IndexController@index');
+    Route::group(['prefix' => 'staff'], function () {
+        Route::get('/','StaffController@index');
+    });
 });
