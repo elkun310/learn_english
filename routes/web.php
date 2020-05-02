@@ -24,3 +24,6 @@ Route::get('alter_user_table', function () {
     });
     echo "ok";
 });
+Route::get('index', function () {
+   return view('backend.index'); 
+});
