@@ -12,6 +12,9 @@
     </section>
 
     <section class="content">
+            <div align="right" style="margin: 20px 0;">
+                <a class="btn btn-success" href="">Add</a>
+            </div>
             <div class="table-responsive">
                 <table class="table table-bordered table-striped" id="staff_table">
                     <thead>
