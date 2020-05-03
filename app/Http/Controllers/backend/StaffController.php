@@ -13,7 +13,7 @@ class StaffController extends Controller
     function index(Request $request){
         // $data['users']  = User::where('role','<>','2')->get();
         // return view('backend.staff.list_staff',$data);
-        $data['user_count'] = User::where('role','<>','2')->count();
+        
         if($request->ajax()){
             $data = User::where('role','<>','2')->get();
             return DataTables::of($data)

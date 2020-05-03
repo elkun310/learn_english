@@ -98,7 +98,7 @@
         <a href="/admin/staff">
         <i class="fa fa-users"></i> <span>Danh sách nhân viên</span>
         <span class="pull-right-container">
-            <small class="label pull-right bg-green">5</small>
+            <small class="label pull-right bg-green">{{$user_count}}</small>
         </span>
         </a>
     </li>
