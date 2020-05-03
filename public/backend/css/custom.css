@@ -2,3 +2,7 @@
 a.sidebar-toggle {
     text-decoration: none;
 }
+
+.content table.dataTable {
+    width: 100% !important;
+}
