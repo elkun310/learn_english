@@ -26,6 +26,7 @@ Route::group(['prefix' => 'admin','namespace'=>'backend'], function () {
     Route::get('/','IndexController@index');
     Route::group(['prefix' => 'staff'], function () {
         Route::get('/','StaffController@index')->name('staff.index');
+        Route::post('store','StaffController@store')->name('staff.store');
     });
     // Route::resource('staff', 'StaffController');
 });

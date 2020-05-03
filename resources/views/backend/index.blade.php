@@ -1,5 +1,5 @@
 @extends('backend.master.master')
-@section('title','Admin Dashboard')
+@section('title','Trang quản trị')
 @section('dashboard','class=active')
 @section('content')
       <!-- Content Header (Page header) -->
