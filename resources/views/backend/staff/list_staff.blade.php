@@ -154,6 +154,7 @@
         $(document).ready(function(){
             $(document).on('click','#btnAdd',function(){
                 $('#formModal').modal();
+                $('#form_result').html('');
             })
             $(document).on('submit','#staff_form',function(e){
                 e.preventDefault();
@@ -179,6 +180,7 @@
                             output +="<div class='alert alert-success'>"+response.success+"</div>";
                             $('#action_button').prop('disabled',false);
                             $('#form_result').html(output);
+                            $('#staff_form')[0].reset();
                             $('#staff_table').DataTable().ajax.reload();
                         }
                     }
