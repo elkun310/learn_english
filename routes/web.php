@@ -13,15 +13,15 @@ use App\User;
 |
 */
 // alter table users
-Route::get('alter_user_table', function () {
-    Schema::table('users', function ($table) {
-        $table->string('phone',11)->nullable()->change();
-        $table->integer('level')->nullable()->default('1')->change();
-    });
-    echo "ok";
-});
+// Route::get('alter_user_table', function () {
+//     Schema::table('users', function ($table) {
+//         $table->string('phone',11)->nullable()->change();
+//         $table->integer('level')->nullable()->default('1')->change();
+//     });
+//     echo "ok";
+// });
 
-//ADMIN
+// ADMIN
 Route::group(['prefix' => 'admin','namespace'=>'backend'], function () {
     Route::get('/','IndexController@index');
     Route::group(['prefix' => 'staff'], function () {
