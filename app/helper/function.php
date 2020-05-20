@@ -1,5 +1,5 @@
 <?php
-function showError($error,$nameInput){
+function showError($errors,$nameInput){
     if ($errors->has($nameInput))
     {
         echo'<div class="notification-container"><div class="alert alert-danger bg-danger thongbao" role="alert"><strong>';

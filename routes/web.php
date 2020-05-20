@@ -21,6 +21,10 @@ use App\User;
 //     echo "ok";
 // });
 
+
+
+Route::get('login','backend\LoginController@index');
+Route::post('login','backend\LoginController@login');
 // ADMIN
 Route::group(['prefix' => 'admin','namespace'=>'backend'], function () {
     Route::get('/','IndexController@index');
