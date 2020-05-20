@@ -8,7 +8,11 @@
         <img src="img/user1-128x128.jpg" class="img-circle" alt="User Image">
     </div>
     <div class="pull-left info">
-        <p>Nguyễn Quốc Hà</p>
+        <p>
+            @if (Auth::check())
+                {{Auth::user()->lastname." ".Auth::user()->firstname}}
+            @endif
+        </p>
         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
     </div>
     </div>

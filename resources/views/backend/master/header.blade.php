@@ -216,7 +216,11 @@
         <li class="dropdown user user-menu">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <img src="img/user1-128x128.jpg" class="user-image" alt="User Image">
-            <span class="hidden-xs">Nguyễn Quốc Hà</span>
+            <span class="hidden-xs">
+                @if (Auth::check())
+                    {{Auth::user()->lastname." ".Auth::user()->firstname}}
+                @endif
+            </span>
         </a>
         <ul class="dropdown-menu">
             <!-- User image -->
@@ -224,7 +228,9 @@
             <img src="img/user1-128x128.jpg" class="img-circle" alt="User Image">
 
             <p>
-                Nguyễn Quốc Hà - Web Developer
+                @if (Auth::check())
+                    {{Auth::user()->lastname." ".Auth::user()->firstname}}
+                @endif - Web Developer
                 <small>Member since May. 2020</small>
             </p>
             </li>
@@ -238,7 +244,7 @@
                 <a href="#" class="btn btn-default btn-flat">Tài khoản cá nhân</a>
             </div>
             <div class="pull-right">
-                <a href="#" class="btn btn-default btn-flat">Đăng xuất</a>
+                <a href="/admin/logout" class="btn btn-default btn-flat">Đăng xuất</a>
             </div>
             </li>
         </ul>

@@ -23,11 +23,12 @@ use App\User;
 
 
 
-Route::get('login','backend\LoginController@index');
+Route::get('login','backend\LoginController@index')->middleware('CheckLogout');
 Route::post('login','backend\LoginController@login');
 // ADMIN
-Route::group(['prefix' => 'admin','namespace'=>'backend'], function () {
+Route::group(['prefix' => 'admin','middleware'=>'CheckLogin','namespace'=>'backend'], function () {
     Route::get('/','IndexController@index');
+    Route::get('logout','IndexController@LogOut');
     Route::group(['prefix' => 'staff'], function () {
         Route::get('/','StaffController@index')->name('staff.index');
         Route::post('store','StaffController@store')->name('staff.store');
